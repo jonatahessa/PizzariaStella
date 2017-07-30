@@ -21,6 +21,7 @@ function abrirEditar(form) {
   var optionFogazza = document.createElement("option");
   var optionDoce = document.createElement("option");
   var optionBebida = document.createElement("option");
+  var optionBorda = document.createElement("option");
   var optionPromo = document.createElement("option");
   optionComum.innerHTML = "Comum";
   optionComum.setAttribute("value", "COMUM");
@@ -32,6 +33,8 @@ function abrirEditar(form) {
   optionFogazza.setAttribute("value", "FOGAZZA");
   optionPromo.innerHTML = "Promoção";
   optionPromo.setAttribute("value", "PROMOCAO");
+  optionBorda.innerHTML = "Borda";
+  optionBorda.setAttribute("value", "BORDA");
 
   for (var i = 0; i < inputs.length; i++) {
     inputs[i].value = form[i].value;
@@ -49,6 +52,7 @@ function abrirEditar(form) {
     select.appendChild(optionBebida);
     select.appendChild(optionPromo);
     select.appendChild(optionFogazza);
+    select.appendChild(optionBorda);
 
   } else if (form[4].value == 'BEBIDA') {
     select.appendChild(optionBebida);
@@ -56,6 +60,7 @@ function abrirEditar(form) {
     select.appendChild(optionDoce);
     select.appendChild(optionPromo);
     select.appendChild(optionFogazza);
+    select.appendChild(optionBorda);
 
   } else if (form[4].value == 'PROMOCAO') {
     select.appendChild(optionPromo);
@@ -63,6 +68,7 @@ function abrirEditar(form) {
     select.appendChild(optionComum);
     select.appendChild(optionDoce);
     select.appendChild(optionFogazza);
+    select.appendChild(optionBorda);
 
   } else if (form[4].value == 'FOGAZZA') {
     select.appendChild(optionFogazza);
@@ -70,6 +76,15 @@ function abrirEditar(form) {
     select.appendChild(optionBebida);
     select.appendChild(optionComum);
     select.appendChild(optionDoce);
+    select.appendChild(optionFogazza);
+    select.appendChild(optionBorda);
+
+  } else if (form[4].value == 'BORDA') {
+    select.appendChild(optionBorda);
+    select.appendChild(optionBebida);
+    select.appendChild(optionComum);
+    select.appendChild(optionDoce);
+    select.appendChild(optionPromo);
     select.appendChild(optionFogazza);
   }
 

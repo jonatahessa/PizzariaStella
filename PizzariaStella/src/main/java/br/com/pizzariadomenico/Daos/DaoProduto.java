@@ -63,19 +63,19 @@ public class DaoProduto {
     public static List<Produto> listarPaginaInicialComum()
             throws SQLException, Exception {
         String sql = "SELECT * FROM Pizzas WHERE Ativo = 'SIM' AND "
-                + "Tipo = 'COMUM' ORDER BY ID;";
+                + "Tipo = 'COMUM' ORDER BY Nome;";
 
         return executarConsulta(sql);
     }
-    
+
     public static List<Produto> listarPaginaInicialDoces()
             throws SQLException, Exception {
         String sql = "SELECT * FROM Pizzas WHERE Ativo = 'SIM' AND "
-                + "Tipo = 'DOCE' ORDER BY ID;";
+                + "Tipo = 'DOCE' ORDER BY Nome;";
 
         return executarConsulta(sql);
     }
-    
+
     public static List<Produto> listarPaginaInicialFogazzas()
             throws SQLException, Exception {
         String sql = "SELECT * FROM Pizzas WHERE Ativo = 'SIM' AND "
@@ -83,7 +83,7 @@ public class DaoProduto {
 
         return executarConsulta(sql);
     }
-    
+
     public static List<Produto> listarPaginaInicialBebidas()
             throws SQLException, Exception {
         String sql = "SELECT * FROM Pizzas WHERE Ativo = 'SIM' AND "
@@ -91,11 +91,19 @@ public class DaoProduto {
 
         return executarConsulta(sql);
     }
-    
+
     public static List<Produto> listarPaginaInicialPromocoes()
             throws SQLException, Exception {
         String sql = "SELECT * FROM Pizzas WHERE Ativo = 'SIM' AND "
                 + "Tipo = 'PROMOCAO' ORDER BY ID;";
+
+        return executarConsulta(sql);
+    }
+
+    public static List<Produto> listarPaginaInicialBordas()
+            throws SQLException, Exception {
+        String sql = "SELECT * FROM Pizzas WHERE Ativo = 'SIM' AND "
+                + "Tipo = 'BORDA' ORDER BY ID;";
 
         return executarConsulta(sql);
     }
@@ -209,8 +217,8 @@ public class DaoProduto {
             }
         }
     }
-    
-    public static boolean verificarUsuario (String login, String senha) throws
+
+    public static boolean verificarUsuario(String login, String senha) throws
             SQLException, Exception {
         String sql = "SELECT * FROM Usuario"
                 + " WHERE Username = ?"
@@ -220,7 +228,7 @@ public class DaoProduto {
 
         connection = ConnectionUtils.getConnection();
         statement = connection.prepareStatement(sql);
-        
+
         statement.setString(1, login);
         statement.setString(2, senha);
 

@@ -58,6 +58,11 @@ section {
   font-size: 120%;
 }
 
+#linkstels a {
+  color: #d4d4d4;
+  text-decoration: none;
+}
+
 #logowhats {
   width: 20px;
 }
@@ -235,6 +240,18 @@ section {
     display: none;
 }
 
+.mostrarbordas {
+    width: 100%;
+    height: auto;
+    position: static;
+    transition: 1s;
+    animation-name: exibir;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+    display: none;
+}
+
 @keyframes exibir {
     0% { visibility: hidden; opacity: 0; }
     25% { visibility: visible; opacity: 1; }
@@ -265,6 +282,12 @@ section {
     color: #e0e0e0;
 }
 
+.mostrarbordas table {
+    width: 100%;
+    font-family: 'Hind', sans-serif;
+    color: #e0e0e0;
+}
+
 .mostrarsalgadas table tr:nth-child(odd) {
     background-color: #ccc;
     color: black;
@@ -285,6 +308,11 @@ section {
     color: black;
 }
 
+.mostrarbordas table tr:nth-child(odd) {
+    background-color: #ccc;
+    color: black;
+}
+
 .mostrarsalgadas table th {
     text-align: left;
 }
@@ -298,6 +326,10 @@ section {
 }
 
 .mostrarbebidas table th {
+    text-align: left;
+}
+
+.mostrarbordas table th {
     text-align: left;
 }
 
@@ -341,6 +373,19 @@ section {
 }
 
 .mostrarbebidas button {
+    border: none;
+    background: transparent;
+    font-family: 'Pacifico', cursive;
+    font-weight: bold;
+    color: #ff5252;
+    transition: 1s;
+    width: 100%;
+    font-size: 200%;
+    margin: 0 auto;
+    display: block;
+}
+
+.mostrarbordas button {
     border: none;
     background: transparent;
     font-family: 'Pacifico', cursive;
@@ -414,6 +459,26 @@ section {
 }
 
 #abrebebidas {
+    border: none;
+    background: transparent;
+    font-family: 'Pacifico', cursive;
+    font-weight: bold;
+    color: #ff5252;
+    transition: 1s;
+    width: 80%;
+    font-size: 200%;
+    margin: auto;
+    left: 0;
+    right: 0;
+    display: block;
+    animation-name: esconder;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+    display: block;
+}
+
+#abrebordas {
     border: none;
     background: transparent;
     font-family: 'Pacifico', cursive;
@@ -514,6 +579,10 @@ section {
   text-align: center;
   font-size: 300%;
   margin: 1% auto;
+}
+
+#linkscontato a {
+  color: #e0e0e0;
 }
 
 #sessaocontato img {

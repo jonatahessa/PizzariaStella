@@ -33,13 +33,17 @@ public class GetSabores extends HttpServlet {
         List<Produto> fogazzas = Utils.ListarPizzasPaginaInicialFogazzas();
         List<Produto> bebidas = Utils.ListarPizzasPaginaInicialBebidas();
         List<Produto> promo = Utils.ListarPizzasPaginaInicialPromocoes();
+        List<Produto> borda = Utils.ListarPizzasPaginaInicialBordas();
         request.setAttribute("salgadas", pizzasComuns);
         request.setAttribute("pizzasdoces", pizzasDoces);
         request.setAttribute("fogazzas", fogazzas);
         request.setAttribute("bebidas", bebidas);
-        for (Produto prod : promo){
-            String promoConvert = prod.getDescricao().replaceAll("\n", "<br/>");
-            prod.setDescricao(promoConvert);
+        request.setAttribute("bordas", borda);
+        if (promo != null) {
+            for (Produto prod : promo) {
+                String promoConvert = prod.getDescricao().replaceAll("\n", "<br/>");
+                prod.setDescricao(promoConvert);
+            }
         }
         request.setAttribute("promocoes", promo);
         RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/index.jsp");

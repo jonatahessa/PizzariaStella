@@ -106,6 +106,7 @@
                         <option value="FOGAZZA">Fogazza</option>
                         <option value="BEBIDA">Bebida</option>
                         <option value="PROMOCAO">Promoção</option>
+                        <option value="BORDA">Borda</option>
                     </select>
                 </div>
 

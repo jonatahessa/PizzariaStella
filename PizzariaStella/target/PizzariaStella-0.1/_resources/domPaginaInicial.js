@@ -3,10 +3,12 @@ function main() {
   var fecharDoces = [];
   var fecharFogazzas = [];
   var fecharBebidas = [];
+  var fecharBordas = [];
   var abrir = document.querySelector("#abresalgadas");
   var abrirDoces = document.querySelector("#abredoces");
   var abrirFogazzas = document.querySelector("#abrefogazzas");
   var abrirBebidas = document.querySelector("#abrebebidas");
+  var abrirBordas = document.querySelector("#abrebordas");
   var botaocardapio = document.querySelector("#buttoncardapio");
   var nossa = document.querySelector("#buttonnossacasa");
   var varhome = document.querySelector("#buttonhome");
@@ -34,10 +36,16 @@ function main() {
     fecharBebidas[i].addEventListener("click", hideBebidas);
   }
 
+  fecharBordas = document.querySelectorAll(".buttonsfecharbordas");
+  for (var i = 0; i < fecharBordas.length; i++) {
+    fecharBordas[i].addEventListener("click", hideBordas);
+  }
+
   abrir.addEventListener("click", showSalgadas);
   abrirDoces.addEventListener("click", showDoces);
   abrirFogazzas.addEventListener("click", showFogazzas);
   abrirBebidas.addEventListener("click", showBebidas);
+  abrirBordas.addEventListener("click", showBordas);
   varhome.addEventListener("click", home);
   promo.addEventListener("click", promocao);
   nossa.addEventListener("click", nossacasa);
@@ -90,24 +98,39 @@ function showBebidas() {
   document.querySelector("#abrebebidas").style.display = "none";
 }
 
+function showBordas() {
+  document.querySelector(".mostrarbordas").style.display = "block";
+  document.querySelector("#abrebordas").style.display = "none";
+}
+
 function hideSalgadas() {
   document.querySelector(".mostrarsalgadas").style.display = "none";
   document.querySelector("#abresalgadas").style.display = "block";
+  document.querySelector("#sessaocardapio").scrollIntoView();
 }
 
 function hideDoces() {
   document.querySelector(".mostrardoces").style.display = "none";
   document.querySelector("#abredoces").style.display = "block";
+  document.querySelector("#sessaocardapio").scrollIntoView();
 }
 
 function hideFogazzas() {
   document.querySelector(".mostrarfogazzas").style.display = "none";
   document.querySelector("#abrefogazzas").style.display = "block";
+  document.querySelector("#sessaocardapio").scrollIntoView();
 }
 
 function hideBebidas() {
   document.querySelector(".mostrarbebidas").style.display = "none";
   document.querySelector("#abrebebidas").style.display = "block";
+  document.querySelector("#sessaocardapio").scrollIntoView();
+}
+
+function hideBordas() {
+  document.querySelector(".mostrarbordas").style.display = "none";
+  document.querySelector("#abrebordas").style.display = "block";
+  document.querySelector("#sessaocardapio").scrollIntoView();
 }
 
 window.addEventListener("load", main);

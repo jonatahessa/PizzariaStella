@@ -23,9 +23,9 @@
                     <img src="_imagens/logo.png">
                   </div>
                     <div id="telefones">
-                      <p>9 5421-7741 <img src="_imagens/whatsapp.png" id="logowhats"><br>
-                        5611-6108 <br>
-                        5616-8310</p>
+                      <p id="linkstels"><a href="tel:011954217741">95421-7741</a> <img src="_imagens/whatsapp.png" id="logowhats"><br>
+                        <a href="tel:01156116108">5611-6108</a><br>
+                        <a href="tel:01156168310">5616-8310</a></p>
                     </div>
                     <li><button type="button" id="buttoncontato">Contato</button></li>
                     <li><button type="button" id="buttonlocalizacao">Localização</button></li>
@@ -117,14 +117,12 @@
                     <button class="buttonsfecharfogazzas" type="button" name="fecharcardapio">Fechar</button>
                     <table>
                         <tr>
-                            <th id="numeropizza">Número</th>
                             <th id="saborpizza">Sabor</th>
                             <th id="descricao">Ingredientes</th>
                             <th id="precopizza">Preço</th>
                         </tr>
                         <c:forEach var="fogazza" items="${fogazzas}">
                             <tr>
-                                <td class="celulas">${fogazza.codigo}</td>
                                 <td class="celulas">${fogazza.nome}</td>
                                 <td>${fogazza.descricao}</td>
                                 <td class="celulas">${fogazza.preco}</td>
@@ -157,6 +155,25 @@
                     <button class="buttonsfecharbebidas" type="button" name="fecharcardapio">Fechar</button>
                 </div>
 
+                <button id="abrebordas" type="button" name="abrebordas">Abrir Bordas</button>
+
+                <div class="mostrarbordas">
+                    <button class="buttonsfecharbordas" type="button" name="fecharcardapio">Fechar</button>
+                    <table>
+                        <tr>
+                            <th id="saborpizza">Sabor</th>
+                            <th id="precopizza">Preço</th>
+                        </tr>
+                        <c:forEach var="borda" items="${bordas}">
+                            <tr>
+                                <td class="celulas">${borda.nome}</td>
+                                <td class="celulas">${borda.preco}</td>
+                            </tr>
+                        </c:forEach>
+                    </table>
+                    <button class="buttonsfecharbordas" type="button" name="fecharcardapio">Fechar</button>
+                </div>
+
             </div>
 
             <div class="sessoes" id="sessaolocalizacao">
@@ -170,9 +187,9 @@
               <div class="sessoes">
                 <h1 class="titulos">Contato</h1>
                 <hr/>
-                <h3>5611-6108</h3>
-                <h3>5616-8310</h3>
-                <h3>9 5421-7741 <img src="_imagens/whatsapp.png"></h3>
+                <h3 id="linkscontato"><a href="tel:011954217741">95421-7741</a> <img src="_imagens/whatsapp.png" id="logowhats"><br>
+                  <a href="tel:01156116108">5611-6108</a><br>
+                  <a href="tel:01156168310">5616-8310</a></h3>
                 <p>Segunda à Quinta: das 18h00 às 23h30<br/>
                 Sexta à Sábado: das 18h00 às 00h30<br/>
                 Domingos, Vésperas e Feriados: das 18h00 às 00h00<br/></p>
