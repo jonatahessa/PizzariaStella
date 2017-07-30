@@ -1,9 +1,11 @@
 function main() {
   var fechar = [];
   var fecharDoces = [];
+  var fecharFogazzas = [];
   var fecharBebidas = [];
   var abrir = document.querySelector("#abresalgadas");
   var abrirDoces = document.querySelector("#abredoces");
+  var abrirFogazzas = document.querySelector("#abrefogazzas");
   var abrirBebidas = document.querySelector("#abrebebidas");
   var botaocardapio = document.querySelector("#buttoncardapio");
   var nossa = document.querySelector("#buttonnossacasa");
@@ -22,6 +24,11 @@ function main() {
     fecharDoces[i].addEventListener("click", hideDoces);
   }
 
+  fecharFogazzas = document.querySelectorAll(".buttonsfecharfogazzas");
+  for (var i = 0; i < fecharFogazzas.length; i++) {
+    fecharFogazzas[i].addEventListener("click", hideFogazzas);
+  }
+
   fecharBebidas = document.querySelectorAll(".buttonsfecharbebidas");
   for (var i = 0; i < fecharBebidas.length; i++) {
     fecharBebidas[i].addEventListener("click", hideBebidas);
@@ -29,6 +36,7 @@ function main() {
 
   abrir.addEventListener("click", showSalgadas);
   abrirDoces.addEventListener("click", showDoces);
+  abrirFogazzas.addEventListener("click", showFogazzas);
   abrirBebidas.addEventListener("click", showBebidas);
   varhome.addEventListener("click", home);
   promo.addEventListener("click", promocao);
@@ -72,6 +80,11 @@ function showDoces() {
   document.querySelector("#abredoces").style.display = "none";
 }
 
+function showFogazzas() {
+  document.querySelector(".mostrarfogazzas").style.display = "block";
+  document.querySelector("#abrefogazzas").style.display = "none";
+}
+
 function showBebidas() {
   document.querySelector(".mostrarbebidas").style.display = "block";
   document.querySelector("#abrebebidas").style.display = "none";
@@ -85,6 +98,11 @@ function hideSalgadas() {
 function hideDoces() {
   document.querySelector(".mostrardoces").style.display = "none";
   document.querySelector("#abredoces").style.display = "block";
+}
+
+function hideFogazzas() {
+  document.querySelector(".mostrarfogazzas").style.display = "none";
+  document.querySelector("#abrefogazzas").style.display = "block";
 }
 
 function hideBebidas() {

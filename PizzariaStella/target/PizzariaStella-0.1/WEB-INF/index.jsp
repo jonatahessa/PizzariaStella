@@ -10,6 +10,7 @@
         <link href="https://fonts.googleapis.com/css?family=Marck+Script" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
         <link rel="shortcut icon" href="./_imagens/favicon.ico" />
         <script type="text/javascript" src="./_resources/domPaginaInicial.js"></script>
         <title>Pizzaria Stella</title>
@@ -18,7 +19,14 @@
         <section id="principal">
             <div id="menu">
                 <ul>
-                    <h1>Pizzaria Stella</h1>
+                  <div id="logostella">
+                    <img src="_imagens/logo.png">
+                  </div>
+                    <div id="telefones">
+                      <p>9 5421-7741 <img src="_imagens/whatsapp.png" id="logowhats"><br>
+                        5611-6108 <br>
+                        5616-8310</p>
+                    </div>
                     <li><button type="button" id="buttoncontato">Contato</button></li>
                     <li><button type="button" id="buttonlocalizacao">Localização</button></li>
                     <li><button type="button" id="buttoncardapio">Cardápio</button></li>
@@ -36,11 +44,10 @@
                 <h1 class="titulos">Nossa Casa</h1>
                 <hr/>
                 <div id="fachada">
-                    <img src="_imagens/FachadaPizzaria.jpg">
+                    <img src="_imagens/logo.png">
                 </div>
-                <p>Em 1999, Carlos de Toledo Domenico criou a PIZZARIA DOMENICO, unindo a tradição da pizza com a sofisticação informal. E não parou de crescer, evoluir, adotando o lema: “Atender à expectativa dos clientes” como sinônimo de qualidade.</p>
-                <p>A localização tornou-se privilegiada: Haddock Lobo X Alameda Tietê, a porta de entrada dos Jardins. O investimento constante nas instalações, produtos e serviços, faz com que a DOMENICO seja considerada um dos clássicos, na terra das pizzarias.</p>
-                <p>Todos os recursos são colocados à disposição dos funcionários, para que a filosofia desde a fundação continue: SERVIR PIZZAS COM DEDICAÇÃO, CONHECIMENTO E ALEGRIA.</p>
+                <p>Com 12 anos de tradição, a Pizzaria Stella vem servindo as melhores pizzas e fogazzas da região com muito amor e carinho pra você.</p>
+                <p>O filosofia da Pizzaria Stella desde a fundação sempre será: SERVIR PIZZAS COM DEDICAÇÃO, CARINHO E ALEGRIA.</p>
             </div>
 
             <div class="sessoes" id="sessaopromocoes">
@@ -104,6 +111,28 @@
                     <button class="buttonsfechardoces" type="button" name="fecharcardapio">Fechar</button>
                 </div>
 
+                <button id="abrefogazzas" type="button" name="abrefogazzas">Abrir Fogazzas</button>
+
+                <div class="mostrarfogazzas">
+                    <button class="buttonsfecharfogazzas" type="button" name="fecharcardapio">Fechar</button>
+                    <table>
+                        <tr>
+                            <th id="numeropizza">Número</th>
+                            <th id="saborpizza">Sabor</th>
+                            <th id="descricao">Ingredientes</th>
+                            <th id="precopizza">Preço</th>
+                        </tr>
+                        <c:forEach var="fogazza" items="${fogazzas}">
+                            <tr>
+                                <td class="celulas">${fogazza.codigo}</td>
+                                <td class="celulas">${fogazza.nome}</td>
+                                <td>${fogazza.descricao}</td>
+                                <td class="celulas">${fogazza.preco}</td>
+                            </tr>
+                        </c:forEach>
+                    </table>
+                    <button class="buttonsfecharfogazzas" type="button" name="fecharcardapio">Fechar</button>
+                </div>
 
                 <button id="abrebebidas" type="button" name="abredoces">Abrir Bebidas</button>
 
@@ -127,13 +156,13 @@
                     </table>
                     <button class="buttonsfecharbebidas" type="button" name="fecharcardapio">Fechar</button>
                 </div>
+
             </div>
 
             <div class="sessoes" id="sessaolocalizacao">
                 <h1 class="titulos">Localização</h1>
                 <hr/>
-                <p>Alameda Tietê, 255 – Jardins<br/>
-                Esquina com a rua Haddock Lobo, 1255<br/></p>
+                <p>Praça do Acurí, 49 A - Jardim Pedreira</p>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d913.3859277770523!2d-46.66115002670424!3d-23.692270254340354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb122c9ab5056bdb!2sPizzaria+Stella!5e0!3m2!1spt-BR!2sbr!4v1501248192693"></iframe>
             </div>
 
@@ -141,14 +170,13 @@
               <div class="sessoes">
                 <h1 class="titulos">Contato</h1>
                 <hr/>
-                <h2>Telefone: 5611-6122</h2>
-                <p>Email: jonata.hessa@gmail.com<br/>
-                Domingo, Segunda e Terça-feira – 18:30h à 00:30h<br/>
-                Quarta e Quinta-feira – 18:30h à 1:00h<br/>
-                Sexta, Sábado e Vésperas de feriados. – 18:30h às 02:00h<br/>
-                Horários para o Delivery:<br/>
-                De Segunda à Segunda – 18:30hs à 00:00hs</p>
-                <p id="copyright">Copyright (c) Jonata Hessa 2017 Copyright Holder All Rights Reserved.</p>
+                <h3>5611-6108</h3>
+                <h3>5616-8310</h3>
+                <h3>9 5421-7741 <img src="_imagens/whatsapp.png"></h3>
+                <p>Segunda à Quinta: das 18h00 às 23h30<br/>
+                Sexta à Sábado: das 18h00 às 00h30<br/>
+                Domingos, Vésperas e Feriados: das 18h00 às 00h00<br/></p>
+                <p id="copyright">Copyright (c) Pizzaria Stella Copyright Holder All Rights Reserved.</p>
               </div>
             </footer>
         </section>

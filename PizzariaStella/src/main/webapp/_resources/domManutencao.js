@@ -18,6 +18,7 @@ function abrirEditar(form) {
   inputs = document.querySelectorAll(".inputseditar");
   var select = document.querySelector("#selecteditar");
   var optionComum = document.createElement("option");
+  var optionFogazza = document.createElement("option");
   var optionDoce = document.createElement("option");
   var optionBebida = document.createElement("option");
   var optionPromo = document.createElement("option");
@@ -27,6 +28,8 @@ function abrirEditar(form) {
   optionDoce.setAttribute("value", "DOCE");
   optionBebida.innerHTML = "Bebida";
   optionBebida.setAttribute("value", "BEBIDA");
+  optionFogazza.innerHTML = "Fogazza";
+  optionFogazza.setAttribute("value", "FOGAZZA");
   optionPromo.innerHTML = "Promoção";
   optionPromo.setAttribute("value", "PROMOCAO");
 
@@ -38,24 +41,36 @@ function abrirEditar(form) {
     select.appendChild(optionDoce);
     select.appendChild(optionBebida);
     select.appendChild(optionPromo);
+    select.appendChild(optionFogazza);
 
   } else if (form[4].value == 'DOCE') {
     select.appendChild(optionDoce);
     select.appendChild(optionComum);
     select.appendChild(optionBebida);
     select.appendChild(optionPromo);
+    select.appendChild(optionFogazza);
 
   } else if (form[4].value == 'BEBIDA') {
     select.appendChild(optionBebida);
     select.appendChild(optionComum);
     select.appendChild(optionDoce);
     select.appendChild(optionPromo);
+    select.appendChild(optionFogazza);
 
   } else if (form[4].value == 'PROMOCAO') {
     select.appendChild(optionPromo);
     select.appendChild(optionBebida);
     select.appendChild(optionComum);
     select.appendChild(optionDoce);
+    select.appendChild(optionFogazza);
+
+  } else if (form[4].value == 'FOGAZZA') {
+    select.appendChild(optionFogazza);
+    select.appendChild(optionPromo);
+    select.appendChild(optionBebida);
+    select.appendChild(optionComum);
+    select.appendChild(optionDoce);
+    select.appendChild(optionFogazza);
   }
 
 

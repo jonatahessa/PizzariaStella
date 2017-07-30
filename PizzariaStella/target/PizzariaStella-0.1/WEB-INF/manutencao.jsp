@@ -103,6 +103,7 @@
                     <select class="form-control" name="tipo">
                         <option value="COMUM">Comum</option>
                         <option value="DOCE">Doce</option>
+                        <option value="FOGAZZA">Fogazza</option>
                         <option value="BEBIDA">Bebida</option>
                         <option value="PROMOCAO">Promoção</option>
                     </select>
