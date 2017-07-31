@@ -88,7 +88,7 @@ section {
     height: 100%;
     float: right;
     width: 10%;
-    font-size: 90%;
+    font-size: 130%;
     font-weight: bold;
     transition: 1s;
     border: none;
@@ -157,6 +157,10 @@ section {
     width: 100%;
     max-width: 300px;
     margin-left: 10%;
+}
+
+#sessaopromocoes {
+  margin-top: 5%;
 }
 
 .paineispromo {

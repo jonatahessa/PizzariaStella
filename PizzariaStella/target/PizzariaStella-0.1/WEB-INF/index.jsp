@@ -32,7 +32,7 @@
                     <li><button type="button" id="buttonlocalizacao">Localização</button></li>
                     <li><button type="button" id="buttoncardapio">Cardápio</button></li>
                     <li><button type="button" id="buttonpromocoes">Promoções</button></li>
-                    <li><button type="button" id="buttonnossacasa">Nossa Casa</button></li>
+                    <li><button type="button" id="buttonnossacasa">A Stella</button></li>
                     <li><button type="button" id="buttonhome">Home</button></li>
                 </ul>
             </div>
@@ -42,7 +42,7 @@
             </div>
 
             <div class="sessoes" id="nossacasa">
-                <h1 class="titulos">Nossa Casa</h1>
+                <h1 class="titulos">A Stella</h1>
                 <hr/>
                 <div id="fachada">
                     <img src="_imagens/logo.png">
