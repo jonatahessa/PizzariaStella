@@ -11,6 +11,7 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lemon" rel="stylesheet">
         <link rel="shortcut icon" href="./_imagens/favicon.ico" />
         <script type="text/javascript" src="./_resources/domPaginaInicial.js"></script>
         <title>Pizzaria Stella</title>
@@ -65,7 +66,7 @@
             <div class="sessoes" id="sessaocardapio">
                 <h1 class="titulos">Cardápio</h1>
                 <hr/>
-                <button id="abresalgadas" type="button" name="abresalgadas">Abrir Pizzas Salgadas</button>
+                <button id="abresalgadas" class="botoesabrir" type="button" name="abresalgadas">Abrir Pizzas Salgadas</button>
                 <div class="mostrarsalgadas">
                     <button class="buttonsfecharsalgadas" type="button" name="fecharcardapio">Fechar</button>
                     <table>
@@ -88,7 +89,7 @@
                 </div>
 
 
-                <button id="abredoces" type="button" name="abredoces">Abrir Pizzas Doces</button>
+                <button id="abredoces" type="button" class="botoesabrir" name="abredoces">Abrir Pizzas Doces</button>
 
                 <div class="mostrardoces">
                     <button class="buttonsfechardoces" type="button" name="fecharcardapio">Fechar</button>
@@ -111,7 +112,7 @@
                     <button class="buttonsfechardoces" type="button" name="fecharcardapio">Fechar</button>
                 </div>
 
-                <button id="abrefogazzas" type="button" name="abrefogazzas">Abrir Fogazzas</button>
+                <button id="abrefogazzas" type="button" class="botoesabrir" name="abrefogazzas">Abrir Fogazzas</button>
 
                 <div class="mostrarfogazzas">
                     <button class="buttonsfecharfogazzas" type="button" name="fecharcardapio">Fechar</button>
@@ -132,7 +133,7 @@
                     <button class="buttonsfecharfogazzas" type="button" name="fecharcardapio">Fechar</button>
                 </div>
 
-                <button id="abrebebidas" type="button" name="abredoces">Abrir Bebidas</button>
+                <button id="abrebebidas" type="button" class="botoesabrir" name="abredoces">Abrir Bebidas</button>
 
                 <div class="mostrarbebidas">
                     <button class="buttonsfecharbebidas" type="button" name="fecharcardapio">Fechar</button>
@@ -155,7 +156,7 @@
                     <button class="buttonsfecharbebidas" type="button" name="fecharcardapio">Fechar</button>
                 </div>
 
-                <button id="abrebordas" type="button" name="abrebordas">Abrir Bordas</button>
+                <button id="abrebordas" class="botoesabrir" type="button" name="abrebordas">Abrir Bordas</button>
 
                 <div class="mostrarbordas">
                     <button class="buttonsfecharbordas" type="button" name="fecharcardapio">Fechar</button>
@@ -166,7 +167,7 @@
                         </tr>
                         <c:forEach var="borda" items="${bordas}">
                             <tr>
-                                <td class="celulas">${borda.nome}</td>
+                                <td>${borda.nome}</td>
                                 <td class="celulas">${borda.preco}</td>
                             </tr>
                         </c:forEach>

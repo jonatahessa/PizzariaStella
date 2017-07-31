@@ -336,7 +336,7 @@ section {
 .mostrarsalgadas button {
     border: none;
     background: transparent;
-    font-family: 'Pacifico', cursive;
+    font-family: 'Lemon', cursive;
     font-weight: bold;
     color: #ff5252;
     transition: 1s;
@@ -349,7 +349,7 @@ section {
 .mostrardoces button {
     border: none;
     background: transparent;
-    font-family: 'Pacifico', cursive;
+    font-family: 'Lemon', cursive;
     font-weight: bold;
     color: #ff5252;
     transition: 1s;
@@ -362,7 +362,7 @@ section {
 .mostrarfogazzas button {
     border: none;
     background: transparent;
-    font-family: 'Pacifico', cursive;
+    font-family: 'Lemon', cursive;
     font-weight: bold;
     color: #ff5252;
     transition: 1s;
@@ -375,7 +375,7 @@ section {
 .mostrarbebidas button {
     border: none;
     background: transparent;
-    font-family: 'Pacifico', cursive;
+    font-family: 'Lemon', cursive;
     font-weight: bold;
     color: #ff5252;
     transition: 1s;
@@ -388,7 +388,7 @@ section {
 .mostrarbordas button {
     border: none;
     background: transparent;
-    font-family: 'Pacifico', cursive;
+    font-family: 'Lemon', cursive;
     font-weight: bold;
     color: #ff5252;
     transition: 1s;
@@ -401,13 +401,13 @@ section {
 #abresalgadas {
     border: none;
     background: transparent;
-    font-family: 'Pacifico', cursive;
+    font-family: 'Lemon', cursive;
     font-weight: bold;
     color: #ff5252;
     transition: 1s;
     width: 80%;
-    font-size: 200%;
-    margin: auto;
+    font-size: 250%;
+    margin: 4% auto;
     left: 0;
     right: 0;
     display: block;
@@ -421,13 +421,13 @@ section {
 #abredoces {
     border: none;
     background: transparent;
-    font-family: 'Pacifico', cursive;
+    font-family: 'Lemon', cursive;
     font-weight: bold;
     color: #ff5252;
     transition: 1s;
     width: 80%;
-    font-size: 200%;
-    margin: auto;
+    font-size: 250%;
+    margin: 4% auto;
     left: 0;
     right: 0;
     display: block;
@@ -441,13 +441,13 @@ section {
 #abrefogazzas {
     border: none;
     background: transparent;
-    font-family: 'Pacifico', cursive;
+    font-family: 'Lemon', cursive;
     font-weight: bold;
     color: #ff5252;
     transition: 1s;
     width: 80%;
-    font-size: 200%;
-    margin: auto;
+    font-size: 250%;
+    margin: 4% auto;
     left: 0;
     right: 0;
     display: block;
@@ -461,13 +461,13 @@ section {
 #abrebebidas {
     border: none;
     background: transparent;
-    font-family: 'Pacifico', cursive;
+    font-family: 'Lemon', cursive;
     font-weight: bold;
     color: #ff5252;
     transition: 1s;
     width: 80%;
-    font-size: 200%;
-    margin: auto;
+    font-size: 250%;
+    margin: 4% auto;
     left: 0;
     right: 0;
     display: block;
@@ -481,13 +481,13 @@ section {
 #abrebordas {
     border: none;
     background: transparent;
-    font-family: 'Pacifico', cursive;
+    font-family: 'Lemon', cursive;
     font-weight: bold;
     color: #ff5252;
     transition: 1s;
     width: 80%;
-    font-size: 200%;
-    margin: auto;
+    font-size: 250%;
+    margin: 4% auto;
     left: 0;
     right: 0;
     display: block;
